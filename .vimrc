@@ -28,7 +28,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'user/L9', {'name': 'newL9'}
 " Plugin 'ns9tks/vim-l9'
 " Plugin 'ns9tks/vim-autocomplpop'
-Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'jistr/vim-nerdtree-tabs'
 
 " Plugin 'vim-erlang/vim-erlang-omnicomplete'
 
@@ -66,6 +66,10 @@ set cursorline
 set showmatch
 set foldenable
 
+set hlsearch
+nmap <F4> :set hlsearch! hlsearch?<CR>
+
+
 set selectmode=mouse
 set showtabline=2
 set splitbelow
@@ -97,7 +101,6 @@ set bufhidden=hide
 
 
 autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <C-n> :NERDTreeTabsToggle<CR>
 
@@ -120,10 +123,10 @@ let g:ctrlp_prompt_mappings = {
 " autocmd BufNew * execute ":tabmove99"
 "
 "
-" set guifont=Inconsolata\ for\ Powerline:h15
-" let g:Powerline_symbols = 'fancy'
-" set encoding=utf-8
-" set t_Co=256
-" set fillchars+=stl:\ ,stlnc:\
-" set term=xterm-256color
-" set termencoding=utf-8
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
